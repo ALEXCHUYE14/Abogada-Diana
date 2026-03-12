@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diana Mirelly Vera Córdova | Abogada</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="scales">⚖</div>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobile()">✕</button>
+  <a href="#inicio" onclick="closeMobile()">Inicio</a>
+  <a href="#about" onclick="closeMobile()">Sobre Mí</a>
+  <a href="#services" onclick="closeMobile()">Servicios</a>
+  <a href="#contacto" onclick="closeMobile()">Contacto</a>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">Diana <span>Vera</span></div>
+  <ul class="nav-links">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#about">Sobre Mí</a></li>
+    <li><a href="#services">Servicios</a></li>
+    <li><a href="#why">¿Por Qué Yo?</a></li>
+    <li><a href="#contacto" class="nav-cta">Consulta Gratis</a></li>
+  </ul>
+  <div class="hamburger" onclick="openMobile()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+
+  <div class="hero-text">
+    <div class="hero-eyebrow">Estudio Jurídico — Abogados & Asociados</div>
+    <h1 class="hero-name">
+      Diana Mirelly<br>
+      <strong>Vera Córdova</strong>
+    </h1>
+    <p class="hero-title">Abogada & Consultora Jurídica</p>
+    <div class="hero-divider"></div>
+    <p class="hero-description">
+      Soluciones legales integrales con ética, compromiso y resultados. Defiendo sus derechos con dedicación y conocimiento en todas las áreas del derecho.
+    </p>
+    <div class="hero-buttons">
+      <a href="#contacto" class="btn-primary">💬 Consulta Gratuita</a>
+      <a href="#services" class="btn-outline">Ver Servicios →</a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-image-frame">
+      <img src="img/Diana 01.jpg"
+           alt="Diana Mirelly Vera Córdova - Abogada" class="hero-img">
+      <div class="hero-image-tag">
+        <p>Diana M. Vera Córdova</p>
+        <p>Abogada Colegiada</p>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">Años</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">5</div>
+          <div class="stat-label">Áreas</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Dedicación</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-image-wrap reveal">
+      <img src="img/Diana.jpg" alt="Diana Vera Córdova" class="about-img">
+      <div class="about-accent"></div>
+      <div class="about-badge">
+        <span class="num">⚖</span>
+        <span class="txt">Justicia</span>
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <div class="section-eyebrow">Conóceme</div>
+      <h2 class="section-title">Comprometida con <em>su justicia</em></h2>
+      <p class="about-desc">
+        Soy Diana Mirelly Vera Córdova, abogada egresada con vocación por la defensa de los derechos de mis clientes. Mi enfoque combina rigor técnico jurídico con un trato humano y cercano, porque entiendo que detrás de cada caso hay una persona que necesita respaldo real.
+      </p>
+      <p class="about-desc">
+        Trabajo bajo los principios de transparencia, confidencialidad y resultados. Cada caso es atendido con atención personalizada desde el primer contacto hasta la resolución final.
+      </p>
+      <div class="about-values">
+        <div class="value-item">
+          <strong>Ética Profesional</strong>
+          <span>Actuación íntegra en cada caso</span>
+        </div>
+        <div class="value-item">
+          <strong>Experiencia</strong>
+          <span>Formación sólida y práctica</span>
+        </div>
+        <div class="value-item">
+          <strong>Comunicación</strong>
+          <span>Siempre informado de su caso</span>
+        </div>
+        <div class="value-item">
+          <strong>Resultados</strong>
+          <span>Orientada al éxito de su proceso</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-header reveal">
+    <div class="section-eyebrow" style="justify-content:center">Áreas de Práctica</div>
+    <h2 class="section-title">Nuestros <em>Servicios Legales</em></h2>
+    <p style="font-size:0.83rem;color:var(--gray);max-width:500px;margin:0 auto;line-height:1.8">
+      Brindamos asesoría y representación legal especializada en las siguientes áreas del derecho peruano.
+    </p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <span class="service-icon">⚖️</span>
+      <div class="service-number">01</div>
+      <h3 class="service-title">Derecho Civil</h3>
+      <p class="service-desc">Contratos, obligaciones, responsabilidad civil, propiedad, sucesiones y todos los conflictos entre particulares. Soluciones negociadas o litigio cuando sea necesario.</p>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">👨‍👩‍👧</span>
+      <div class="service-number">02</div>
+      <h3 class="service-title">Derecho de Familia</h3>
+      <p class="service-desc">Divorcios, alimentos, tenencia, custodia, régimen de visitas, filiación y violencia familiar. Protección integral para usted y su familia.</p>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">🔒</span>
+      <div class="service-number">03</div>
+      <h3 class="service-title">Derecho Penal</h3>
+      <p class="service-desc">Defensa penal en todas sus etapas, investigación preparatoria, juzgamiento y apelaciones. Representación de víctimas e imputados con estrategia sólida.</p>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">🏛️</span>
+      <div class="service-number">04</div>
+      <h3 class="service-title">Derecho Administrativo</h3>
+      <p class="service-desc">Recursos administrativos, procedimientos ante entidades del Estado, impugnaciones, licencias y contrataciones con el Estado.</p>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">📜</span>
+      <div class="service-number">05</div>
+      <h3 class="service-title">Derecho Notarial</h3>
+      <p class="service-desc">Escrituras públicas, poderes notariales, declaraciones juradas, protestos y todos los actos que requieren fe pública notarial.</p>
+    </div>
+    <div class="service-card reveal" style="background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.02)); border-color: rgba(201,168,76,0.3);">
+      <span class="service-icon">💬</span>
+      <div class="service-number">+</div>
+      <h3 class="service-title">Consulta Gratuita</h3>
+      <p class="service-desc">Primera consulta sin costo. Cuéntanos tu caso y evaluamos juntos la mejor estrategia legal para tu situación.</p>
+      <br>
+      <a href="#contacto" class="btn-primary" style="display:inline-flex;font-size:0.65rem">Solicitar ahora →</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="why-grid">
+    <div class="why-items reveal">
+      <div class="section-eyebrow">¿Por Qué Elegirnos?</div>
+      <h2 class="section-title" style="margin-bottom:2rem">Su mejor <em>aliada legal</em></h2>
+      <div class="why-item">
+        <div class="why-num">01</div>
+        <div class="why-content">
+          <h3>Atención Personalizada</h3>
+          <p>Cada cliente recibe atención directa de la abogada, sin intermediarios, asegurando comprensión total de su caso.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">02</div>
+        <div class="why-content">
+          <h3>Respuesta Inmediata</h3>
+          <p>Canales de comunicación directa vía WhatsApp para consultas urgentes y seguimiento en tiempo real de su proceso.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">03</div>
+        <div class="why-content">
+          <h3>Honorarios Transparentes</h3>
+          <p>Tarifas claras y justas desde el inicio. Sin sorpresas. Planes de pago adaptados a su situación.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">04</div>
+        <div class="why-content">
+          <h3>Ubicación Estratégica</h3>
+          <p>Oficina en Catacaos con atención presencial y virtual para clientes de toda la región y el país.</p>
+        </div>
+      </div>
+    </div>
+    <div class="why-visual reveal">
+      <p class="why-quote">La justicia no es sólo un derecho, es una necesidad humana fundamental. Mi misión es hacerla accesible para todos.</p>
+      <p class="why-signature">— Diana Mirelly Vera Córdova, Abogada</p>
+      <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(201,168,76,0.2)">
+        <a href="https://wa.me/51922012084?text=Hola%20Diana%2C%20quisiera%20una%20consulta%20legal%20gratuita" 
+           target="_blank" class="btn-primary" style="width:100%;justify-content:center;text-decoration:none;display:flex">
+          📱 Escribir por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contacto">
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <div class="section-eyebrow">Contáctenos</div>
+      <h2 class="section-title">Solicite su <em>consulta gratuita</em></h2>
+      <p>Complete el formulario y le responderemos directamente a su WhatsApp en el menor tiempo posible. La primera consulta es completamente gratuita.</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <div class="contact-item-icon">📱</div>
+          <div class="contact-item-text">
+            <strong>WhatsApp / Teléfono</strong>
+            <a href="https://wa.me/51922012084" target="_blank">+51 922 012 084</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <div class="contact-item-text">
+            <strong>Correo Electrónico</strong>
+            <a href="mailto:dveracordova9@gmail.com">dveracordova9@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div class="contact-item-text">
+            <strong>Dirección</strong>
+            <span>José Jacobo Cruz Mz B lt.37<br>Catacaos, Piura</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">🕐</div>
+          <div class="contact-item-text">
+            <strong>Horario de Atención</strong>
+            <span>Lunes a Viernes: 8:00am - 6:00pm<br>Sábados: 9:00am - 1:00pm</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form reveal">
+      <div id="formContainer">
+        <h3 class="form-title">Cuéntame tu <span>caso</span></h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nombre completo *</label>
+            <input type="text" id="nombre" placeholder="Ej: Juan García" required>
+          </div>
+          <div class="form-group">
+            <label>Teléfono / WhatsApp *</label>
+            <input type="tel" id="telefono" placeholder="+51 999 000 000" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Correo electrónico</label>
+          <input type="email" id="email" placeholder="tucorreo@email.com">
+        </div>
+        <div class="form-group">
+          <label>Área legal de interés *</label>
+          <select id="servicio">
+            <option value="">— Seleccione un servicio —</option>
+            <option>Derecho Civil</option>
+            <option>Derecho de Familia</option>
+            <option>Derecho Penal</option>
+            <option>Derecho Administrativo</option>
+            <option>Derecho Notarial</option>
+            <option>Otro / No sé</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Describa su caso *</label>
+          <textarea id="mensaje" placeholder="Cuénteme brevemente su situación legal. Toda la información es confidencial..."></textarea>
+        </div>
+        <p class="form-note">🔒 Toda la información es estrictamente confidencial. Al enviar, acepta que la Abogada Diana Vera se contacte con usted vía WhatsApp.</p>
+        <button class="btn-submit" onclick="enviarWsp()">
+          📲 Enviar por WhatsApp
+        </button>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <div class="check">✅</div>
+        <h3>¡Consulta Enviada!</h3>
+        <p>Será redirigido a WhatsApp para completar el envío. La Abogada Diana le responderá a la brevedad posible.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="nav-logo">Diana <span>Vera Córdova</span></span>
+      <p>Abogada & Consultora Jurídica. Abogados & Asociados — Estudio Jurídico. Somos un equipo legal a sus servicios.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Servicios</h4>
+      <ul>
+        <li><a href="#services">Derecho Civil</a></li>
+        <li><a href="#services">Derecho de Familia</a></li>
+        <li><a href="#services">Derecho Penal</a></li>
+        <li><a href="#services">Derecho Administrativo</a></li>
+        <li><a href="#services">Derecho Notarial</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="https://wa.me/51922012084" target="_blank">+51 922 012 084</a></li>
+        <li><a href="mailto:dveracordova9@gmail.com">dveracordova9@gmail.com</a></li>
+        <li><a href="#contacto">Consulta Gratuita</a></li>
+        <li><a href="#about">Sobre la Abogada</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Diana Mirelly Vera Córdova — Abogada. Todos los derechos reservados.</p>
+    <p>Catacaos, Piura — Perú</p>
+    <span class="footer-scales">⚖</span>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/51922012084?text=Hola%20Diana%2C%20me%20interesa%20una%20consulta%20legal%20gratuita"
+   target="_blank" class="whatsapp-float" title="Escribir por WhatsApp">💬</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>
