@@ -43,9 +43,19 @@
     display: flex; align-items: center; justify-content: space-between;
     background: linear-gradient(to bottom, rgba(13,13,13,0.95), transparent);
     backdrop-filter: blur(8px);
-    transition: background 0.3s;
+    transition: background 0.3s, padding 0.3s;
   }
-  nav.scrolled { background: rgba(13,13,13,0.97); border-bottom: 1px solid rgba(201,168,76,0.15); }
+  nav.scrolled { 
+    background: rgba(13,13,13,0.97); 
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    padding: 0.8rem 5%;
+  }
+
+  /* Scroll progress bar */
+  .scroll-progress {
+    position: fixed; top: 0; left: 0; height: 3px; background: var(--gold);
+    width: 0; z-index: 1001; transition: width 0.1s;
+  }
 
   .nav-logo {
     font-family: 'Cormorant Garamond', serif;
@@ -484,11 +494,115 @@
     from { opacity: 0; transform: translateX(30px); }
     to { opacity: 1; transform: translateX(0); }
   }
-
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  
   .reveal {
     opacity: 0; transform: translateY(25px); transition: all 0.7s ease;
   }
   .reveal.visible { opacity: 1; transform: translateY(0); }
+  
+  /* Hero specific animations */
+  .hero-text { 
+    animation: fadeUp 1s ease 0.3s both; 
+  }
+  .hero-visual {
+    animation: fadeLeft 1s ease 0.5s both;
+  }
+  
+  /* Service cards enhanced hover */
+  .service-card {
+    position: relative; overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .service-card::before {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+    background: var(--gold); transform: scaleX(0); transition: transform 0.4s;
+    transform-origin: left;
+  }
+  .service-card:hover { 
+    background: var(--dark-3); 
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  }
+  .service-card:hover::before { transform: scaleX(1); }
+  
+  /* About section enhanced */
+  .about-image-wrap {
+    transition: transform 0.5s ease;
+  }
+  .about-image-wrap:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Nav link hover effect */
+  .nav-links a {
+    position: relative;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px;
+    background: var(--gold); transition: width 0.3s ease;
+  }
+  .nav-links a:hover::after,
+  .nav-links a.active::after {
+    width: 100%;
+  }
+  .nav-links a.active {
+    color: var(--gold);
+  }
+  
+  /* Stats animation */
+  .stat-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(201,168,76,0.2);
+  }
+  
+  /* Contact form inputs focus */
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { 
+    border-color: var(--gold); 
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.1);
+  }
+  
+  /* Button enhanced hover */
+  .btn-primary {
+    position: relative; overflow: hidden;
+  }
+  .btn-primary::before {
+    content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+  }
+  .btn-primary:hover::before {
+    left: 100%;
+  }
 
   /* ─── MOBILE NAV MENU ─── */
   .mobile-menu {
